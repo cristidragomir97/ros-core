@@ -18,7 +18,7 @@ For multi-machine setups, or multi-container in our case, ROS requires two envir
 
 After `ROS_MASTER_URI` has been set, services will able to send messages to the core process, but the reverse it's not true, core has no way to know where to send the callback. To solve this issue we need to set links to help resolve them.
 
-Here is an example of a `docker-compose.yaml` file for a robotics solution:
+Here is an example of a `docker-compose.yaml` file :
 
 ```yaml
 version: "2.1"
