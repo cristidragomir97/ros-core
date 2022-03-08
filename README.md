@@ -1,4 +1,5 @@
-!()[https://github.com/cristidragomir97/ros-core/blob/main/icon.png]
+![](https://github.com/cristidragomir97/ros-core/blob/main/icon.png)
+
 # ros-core
 A full installation of ROS Noetic inside a block. 
 
