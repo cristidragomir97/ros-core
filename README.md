@@ -20,40 +20,39 @@ After `ROS_MASTER_URI` has been set, services will able to send messages to the 
 
 Here is an example of a `docker-compose.yaml` file for a robotics solution:
 
-```
-
-version: '2.1'
-
-  
+```yaml
+version: "2.1"
 
 volumes:
-
-shered-ros-bin:
-
-  
+  shered-ros-bin:
 
 services:
+  - roscore:
+        image: cristian_paul/ros-core-arm64
+        environment:
+            - ROS_HOSTNAME=roscore
+            - ROS_MASTER_URI=http://roscore:11311
+        links:
+            - service0
+            - service1
+        volumes:
+          - shered-ros-bin:/opt/ros/noetic
 
-- roscore:
-
-build: cristidragomir97/roscore
-
-environment:
-
-- ROS_HOSTNAME=roscore
-
-- ROS_MASTER_URI=http://roscore:11311
-
-links:
-
-- SERVICE_0
-
-- SERVICE_1
-
-volumes:
-
-- shered-ros-bin:/opt/ros/noetic
-
+  - service0:
+        build: ./service0
+        environment: 
+            - ROS_HOSTNAME=service0
+            - ROS_MASTER_URI=http://roscore:11311
+        volumes:
+          - shered-ros-bin:/opt/ros/noetic
+  
+  - service1:
+        build: ./service1
+        environment: 
+            - ROS_HOSTNAME=service1
+            - ROS_MASTER_URI=http://roscore:11311
+        volumes:
+          - shered-ros-bin:/opt/ros/noetic
 ```
 
   
