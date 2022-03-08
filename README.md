@@ -29,7 +29,7 @@ volumes:
 
 services:
   - roscore:
-        image: cristian_paul/ros-core-arm64
+        image: cristidragomir97/ros-core
         environment:
             - ROS_HOSTNAME=roscore
             - ROS_MASTER_URI=http://roscore:11311
