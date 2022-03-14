@@ -6,8 +6,8 @@
 ### What is ROS? 
 #### ROS: stands for Robotic Operating System. It is a framework for developing robotics applications. 
 
-### Why run ros within balena?
-#### Running ros within balena reduces the complexity of the setup and makes it easier to use. Historically setting up ubuntu and installing ROS was a bit of a hassle. And when it comes to setting up more than a few robots and managing a fleet of robots in the field this can be a major headache.
+### Why run ROS within balena?
+#### Running ROS within balena reduces the complexity of the setup and makes it easier to use. Historically setting up ubuntu and installing ROS was a bit of a hassle. And when it comes to setting up more than a few robots and managing a fleet of robots in the field this can be a major headache.
 #### Here's where `balena` comes in. By having ROS balenifyed it allows your to not worry about setup, its as easy as creating a docker file! And pushing and managing changes is easier than ever!
 
 # Technical Details
