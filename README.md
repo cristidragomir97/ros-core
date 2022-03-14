@@ -1,12 +1,27 @@
 
 # ros-core
-A full installation of ROS Noetic inside a block. 
+### A full installation of ROS Noetic inside a block. 
+<img src="assets/hero_photo_v1.png" height="200" alt="ROS logo" />
+## Background
+### What is ROS? 
+#### ROS: stands for Robotic Operating System. It is a framework for developing robotics applications. 
+
+### Why run ROS within balena?
+#### Running ROS within balena reduces the complexity of the setup and makes it easier to use. Historically setting up ubuntu and installing ROS was a bit of a hassle. And when it comes to setting up more than a few robots and managing a fleet of robots in the field this can be a major headache.
+#### Here's where `balena` comes in. By having ROS balenifyed it allows your to not worry about setup, its as easy as creating a docker file! And pushing and managing changes is easier than ever!
+
+# Technical Details
 
 One instance of this image required to run anything ROS-related on balena devices. Instead of a having full copy of ROS for each service, we define a volume mount share and let the other ROS blocks access the same binaries. 
 
-It's main functionality however is to run the`roscore`process. This process keeps track of the nodes that are running, how to reach them, and what their message types are.
+It's main functionality however is to run the`roscore` process. This process keeps track of the nodes that are running, how to reach them, and what their message types are.
 
 Additionally, ROSCore makes it possible that ROS nodes can all to talk to each other even if they are part of different services/containers. For security reasons, there's a separate internal network for the services. However, you can open whatever port you want to the external world.
+
+# Easy Deployment
+Use this as standalone with the button below:
+[![ros-core block deploy with balena](/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/cristidragomir97/ros-core)
+
 
 
 ## ROS networking
@@ -65,4 +80,25 @@ you need to set `ROS_HOSTNAME` and `ROS_MASTER_URI=http://roscore:11311` for eac
   
 ##### 3. (Optional) Expose ports to talk to the outside world
 
-  
+
+
+-----------------
+# Contributors
+
+[![](https://contrib.rocks/image?repo=cristidragomir97/ros-core)](https://github.com/cristidragomir97/ros-core/graphs/contributors)
+
+##### Made with [contributors-img](https://contrib.rocks).
+
+-----------------
+
+# License
+
+#### MIT © cristidragomir97 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Osi_standard_logo.png?20110731064209" width="75">
+
+```bash
+by cristidragomir97
+github.com/cristidragomir97
+2022/03/14
+```
