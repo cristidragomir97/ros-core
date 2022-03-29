@@ -13,6 +13,7 @@ assets:
     data:
       url: 'https://github.com/cristidragomir97/ros-core/raw/main/icon.png'
 data:
-  defaultDeviceType: raspberrypi4-64
+  defaultDeviceType: raspberrypi3
   supportedDeviceTypes:
-    - raspberrypi4-64
+    - raspberrypi3
+    
