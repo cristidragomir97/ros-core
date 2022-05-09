@@ -24,6 +24,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ros-noetic-rosbash \
     ros-noetic-tf \
     ros-noetic-tf2-ros \
+    ros-noetic-diagnostic-aggregator \
+    ros-noetic-diagnostic-analysis \
+    ros-noetic-diagnostic-common-diagnostics \
+    ros-noetic-diagnostic-msgs \
+    ros-noetic-diagnostic-updater \
     python3 \
     python3-dev \
     python3-pip \
